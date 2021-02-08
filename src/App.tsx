@@ -1,25 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
+import Fade from '@material-ui/core/Fade';
+
+import Loading from './Loading';
+
 function App() {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1000)
+  }, [])
+  
+  console.log(fetch('https://api.github.com/users/drammaster/repos')
+    .then(response => {
+        return response.json();
+    }))
+    
   return (
-    <div className="App">
+    <>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {loading === false ? (
+          <Fade in={!loading} timeout={1000}>
+            <div className="App">
+              
+                <h1>Csaba Darazs</h1>
+                <p>
+                  Welcome
+                </p>
+              
+            </div>
+          </Fade>
+          ) : (
+            <Loading />
+          )}
       </header>
-    </div>
+    </>
   );
 }
 
