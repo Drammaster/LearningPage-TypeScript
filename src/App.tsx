@@ -12,11 +12,8 @@ function App() {
     setTimeout(() => setLoading(false), 1000)
   }, [])
   
-  console.log(fetch('https://api.github.com/users/drammaster/repos')
-    .then(response => {
-        return response.json();
-    }))
-    
+  
+
   return (
     <>
       <header className="App-header">
