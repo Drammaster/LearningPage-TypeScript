@@ -5,7 +5,9 @@ import './App.css';
 function Loading() {
   
   return (
-    <CircularProgress size={300} />
+    <div className="App-loading">
+      <CircularProgress className="App-loading" size={200} />
+    </div>
   );
 }
 

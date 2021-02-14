@@ -2,8 +2,22 @@
   text-align: center;
 }
 
+.App-loading {
+  background: linear-gradient(280deg, #21CBF3 30%, #282c34 80%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-loading {
+  align-self: center;
+}
+
 .App-header {
-  background-color: #282c34;
+  background: linear-gradient(280deg, #21CBF3 30%, #282c34 80%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
