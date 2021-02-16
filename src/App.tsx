@@ -67,11 +67,12 @@ function App() {
                   View Resume
                 </a>*/}
 
-                <br></br>
-
                 <MyButton onClick={() => ChangeMain(1)}>Main</MyButton>
                 <MyButton onClick={() => ChangeMain(2)}>Bio</MyButton>
                 <MyButton onClick={() => ChangeMain(3)}>Github</MyButton>
+
+                <br />
+                <br />
 
                 {main}
                   
